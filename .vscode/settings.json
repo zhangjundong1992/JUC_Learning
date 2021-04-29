@@ -1,0 +1,8 @@
+{
+    "java.project.sourcePaths": [
+        "src",
+        "src/JavaThread",
+        "src/JavaNet",
+    ],
+   "workbench.panel.defaultLocation": "right"
+}
