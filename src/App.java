@@ -1,35 +1,23 @@
+import java.util.ArrayList;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        Fruit fruit=new Watermelon();
-        fruit.name();
-        Test01 t=new Test01();
-        t.foo(((Watermelon)fruit));
-    }
-}
+        List<Integer> list = new ArrayList<>();
 
-class Test01 {
-    public void foo(Watermelon fruit) {
-        System.out.println("foo");
-        fruit.name();
-    }
-}
+        for (int i = 0; i < 10; i++) {
+            list.add(i);
+        }
 
-class Fruit {
-    public void name() {
-        System.out.println("fruit");
-    }
+        for (int i = 0; i < list.size(); i++) {
+            // System.out.println(list.get(i));
+            if (list.get(i) % 2 == 0) {
+                list.remove(i);
+            }
+        }
 
-}
-
-class Watermelon extends Fruit{
-    public void name() {
-        System.out.println("watermelon");
-    }
-}
-
-class Banana extends Fruit{
-    public void name() {
-        System.out.println("banana");
+        for (Integer integer : list) {
+            System.out.println(integer);
+        }
     }
 }

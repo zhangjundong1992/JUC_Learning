@@ -4,7 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 访问者模式特点： 1、被访问的对象具有稳定的嵌套结构 2、经常需要增加不同的访问者，对相同的结构进行不同的处理
+ * 访问者模式特点： 
+ * 1、被访问的对象具有稳定的嵌套结构 
+ * 2、经常需要增加不同的访问者，对相同的结构进行不同的处理
  */
 public class D01visitor {
     public static void main(String[] args) {
@@ -28,7 +30,7 @@ class Store {
     public void service(IVisitor visitor) {
         for (Fruit fruit : list) {
             // visitor.visit(fruit);    /* Java不支持多重分派 */
-            fruit.accept(visitor);  /* 使用单分派模拟多重分派 */
+            fruit.accept(visitor);  /* 使用单分派模拟多重分派,否则需要进行类型判断，破坏了扩展性 */
         }
     }
 }
@@ -43,7 +45,7 @@ class Banana extends Fruit {
 
     @Override
     public void accept(IVisitor visitor) {
-        visitor.visit(this);
+        visitor.visitBanana(this);
     }
 
 }
@@ -52,7 +54,7 @@ class Watermelon extends Fruit {
 
     @Override
     public void accept(IVisitor visitor) {
-        visitor.visit(this);
+        visitor.visitWatermelon(this);
     }
 
 }
@@ -61,9 +63,9 @@ class Watermelon extends Fruit {
  * 接口是稳定的，依赖与水果的种类
  */
 interface IVisitor {
-    void visit(Banana banana);
+    void visitBanana(Banana banana);
 
-    void visit(Watermelon watermelon);
+    void visitWatermelon(Watermelon watermelon);
 }
 
 /**
@@ -72,12 +74,12 @@ interface IVisitor {
 class Ming implements IVisitor {
 
     @Override
-    public void visit(Banana banana) {
+    public void visitBanana(Banana banana) {
 
     }
 
     @Override
-    public void visit(Watermelon watermelon) {
+    public void visitWatermelon(Watermelon watermelon) {
 
     }
 

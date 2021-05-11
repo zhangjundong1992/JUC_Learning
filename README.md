@@ -1,14 +1,17 @@
-## Getting Started
+## Java多线程案例
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.add
+#### 网络编程
 
-## Folder Structure
+#### 线程相关
 
-The workspace contains two folders by default, where:
+#### 枚举相关
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+#### JUC
 
-## Dependency Management
+主要是各种锁的案例
 
-The `JAVA DEPENDENCIES` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-pack/blob/master/release-notes/v0.9.0.md#work-with-jar-files-directly).
+#### JVM示例
+
+学习中
+
+#### 设计模式
