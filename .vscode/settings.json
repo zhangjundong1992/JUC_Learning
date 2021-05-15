@@ -3,7 +3,7 @@
         "src",
         "src/JavaThread",
         "src/JavaNet",
-        "src/Test",
+        // "src/Test",
     ],
    "workbench.panel.defaultLocation": "right"
 }

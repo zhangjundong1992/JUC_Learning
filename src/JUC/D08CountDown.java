@@ -3,6 +3,11 @@ package JUC;
 import java.util.concurrent.CountDownLatch;
 
 /* CountdownLatch */
+/**
+ * 举例
+ * 门卫等待6个同学都出门之后才可以关门
+ * 阻塞的是门卫线程
+*/
 public class D08CountDown {
 
     public static void main(String[] args) throws InterruptedException {
